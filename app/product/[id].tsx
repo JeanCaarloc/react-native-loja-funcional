@@ -54,27 +54,30 @@ const styles = StyleSheet.create({
     },
     img: {
         width: '100%',
-        height: 250,
+        height: 340,
         borderRadius: 10,
         marginBottom: 20
     },
     title: {
         fontSize: 29,
         fontWeight: 'bold',
-        marginBottom: 10
+        marginBottom: 10,
+        color: "#755632",
     },
     description: {
         fontSize: 15,
-        color: "#555555",
+        color: "#755632",
         marginBottom: 20
     },
     priceArea: {
         padding: 10,
         borderRadius: 10,
-        backgroundColor: "#CCCCCC"
+        backgroundColor: "#c2b09c"
     },
     price: {
         fontSize: 22,
-        textAlign: "center"
+        textAlign: "center",
+        color: "white",
+        
     }
 })

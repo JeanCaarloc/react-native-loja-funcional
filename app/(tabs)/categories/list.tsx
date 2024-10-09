@@ -1,6 +1,5 @@
 import { Text, View, StyleSheet, FlatList } from "react-native";
-import { getAllProducts } from "../../../services/product";
-import { ProductItem } from "../../../components/product-item";
+
 import { getAllCategories } from "../../../services/category";
 import { CategoryItem } from "../../../components/category-item";
 
