@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     overlay: {
         ...StyleSheet.absoluteFillObject, // Faz a sobreposição preencher toda a tela
         backgroundColor: 'rgba(0, 0, 0, 0.5)', // Cor preta com 50% de opacidade
-      },
+    },
     logo: {
         width: 200,
         height: 200,
