@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
         height: 150,
         borderRadius: 10,
         backgroundColor: "#000000",
-        opacity: 0.6,
+        opacity: 0.3,
         marginTop: -150
     },
     box:{
