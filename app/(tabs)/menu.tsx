@@ -2,27 +2,39 @@ import { Text, View, StyleSheet, FlatList } from "react-native";
 import { getAllProducts } from "../../services/product";
 import { ProductItem } from "../../components/product-item";
 
-export default function Screen () {
+export default function Screen() {
     //puxando todos os produtos
     const products = getAllProducts();
-    return(
+    return (
         <View style={styles.container}>
-            <FlatList
-                data={products}
-                renderItem={({item}) => <ProductItem data={item}/>}
-                keyExtractor={item => item.id.toString()}
-                style={styles.list}
-            />
+            <View style={styles.button}>
+                <Text>Conta</Text>
+            </View>
+            <View style={styles.button}>
+                <Text>Configurações</Text>
+            </View>
+            <View style={styles.button}>
+                <Text>Carrinho</Text>
+            </View>
+            <View style={styles.button}>
+                <Text>Duvidas</Text>
+            </View>
         </View>
     );
 }
 const styles = StyleSheet.create({
-    container:{
-        flex: 1
-    },
-    list:{
+    container: {
         flex: 1,
-        width: 300,
-        padding: 20
+ 
+    },
+    button:{
+        width:"90%",
+        height:100,
+        borderWidth: 1,
+        margin:20,
+        justifyContent:"center",
+        alignItems:"center"
+
     }
+
 })

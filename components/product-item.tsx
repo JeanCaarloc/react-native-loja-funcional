@@ -46,16 +46,24 @@ const styles = StyleSheet.create({
     title:{
         fontSize: 16,
         fontWeight: "bold",
-        marginBottom: 10
+        marginBottom: 10,
+        color: '#cfbb78',
+        textShadowColor: '#000000',
+        textShadowOffset: { width: -1, height: 1 },
+        textShadowRadius: 2,
     },
     description:{
         fontSize: 13,
-        color: "#555555",
+        color: "#cfbb78",
         marginBottom: 10
     },
     price:{
         fontSize: 14,
         fontWeight: 'bold',
-        textAlign: 'right'
+        textAlign: 'right',
+        color: "black",
+        backgroundColor: "#cfbb78",
+        marginLeft: 170,
+        borderRadius: 8
     },
 })
