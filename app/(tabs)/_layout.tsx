@@ -30,6 +30,7 @@ export default function TabLayout() {
                 name="menu"
                 options={{
                     title: 'Menu',
+                    headerShown: false,
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="list-ul" color={color} />
                 }}
             />
@@ -37,6 +38,7 @@ export default function TabLayout() {
                 name="about"
                 options={{
                     title: 'Sobre mim',
+                    headerShown: false,
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color} />
                 }}
             />
