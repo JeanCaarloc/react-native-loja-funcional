@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, FlatList, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, FlatList, ImageBackground, Pressable, Linking } from "react-native";
 import { getAllProducts } from "../../services/product";
 import { ProductItem } from "../../components/product-item";
 
@@ -6,10 +6,20 @@ export default function Screen() {
     //puxando todos os produtos
     const products = getAllProducts();
 
+    const carrinho = () => {
+        // alert("Você esta comprando: "props.product.name)
+        const url = 'https://pranx.com/fbi-warning/';
+        //importar o linking e fazer ele abrir o link
+        Linking.openURL(url).catch(err => {
+            console.error("Failed to open URL:", err);
+            alert("Não foi possivel abrir o link");
+        });
+    }
+
     const image = { uri: "https://i.pinimg.com/736x/d5/d7/a5/d5d7a5f7fa0eaa70aa19fe826452a6f9.jpg" };
     return (
         <ImageBackground source={image} style={styles.background} resizeMode="cover">
-            <View style={styles.overlay}/>
+            <View style={styles.overlay} />
             <View style={styles.container}>
                 <View style={styles.button}>
                     <Text style={styles.h1}>Conta</Text>
@@ -17,9 +27,9 @@ export default function Screen() {
                 <View style={styles.button}>
                     <Text style={styles.h1}>Configurações</Text>
                 </View>
-                <View style={styles.button}>
+                <Pressable style={styles.button} onPress={carrinho}>
                     <Text style={styles.h1}>Carrinho</Text>
-                </View>
+                </Pressable>
                 <View style={styles.button}>
                     <Text style={styles.h1}>Duvidas</Text>
                 </View>
@@ -39,7 +49,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        justifyContent:"center",
+        justifyContent: "center",
         alignItems: "center",
     },
     button: {
@@ -50,10 +60,10 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#714246",
-        borderRadius:10
+        borderRadius: 10
 
     },
-    h1:{
+    h1: {
         color: "#cfbb78",
         textShadowColor: '#000000',
         textShadowOffset: { width: -1, height: 1 },

@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "loja-att",
+    "name": "Eu Quero Cosmeticos",
     "slug": "loja-att",
     "version": "1.0.0",
     "scheme": "loja-cosmeticos",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon.jpg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -19,13 +19,22 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.jeancaarloc.lojaatt"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "352d1e20-af9f-4392-896e-a9e8ce2c10a9"
+      }
+    }
   }
 }

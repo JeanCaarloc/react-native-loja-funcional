@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         textAlign: 'right',
         color: "black",
         backgroundColor: "#cfbb78",
-        marginLeft: 170,
+        marginLeft: 160,
         borderRadius: 8
     },
 })
