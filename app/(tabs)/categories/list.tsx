@@ -2,6 +2,7 @@ import { Text, View, StyleSheet, FlatList, ImageBackground } from "react-native"
 
 import { getAllCategories } from "../../../services/category";
 import { CategoryItem } from "../../../components/category-item";
+import { Stack } from "expo-router";
 
 export default function Screen() {
     //puxando todos as categorias
@@ -9,9 +10,24 @@ export default function Screen() {
 
     const image = { uri: "https://i.pinimg.com/736x/d5/d7/a5/d5d7a5f7fa0eaa70aa19fe826452a6f9.jpg" };
     return (
+
+        
         <ImageBackground source={image} style={styles.background} resizeMode="cover">
             <View style={styles.overlay} />
             <View style={styles.container}>
+            <Stack.Screen options={{
+                title: 'Categorias',
+                headerTitleAlign: 'center',
+                navigationBarColor:'#714246',
+                headerStyle: {
+                  backgroundColor: '#714246',
+                },
+                headerTitleStyle: {
+                  fontWeight: 'bold',
+                },
+                headerTintColor:"#cfbb78"
+            }}
+            />
                 <FlatList
                     data={categories}
                     renderItem={({ item }) => <CategoryItem data={item} />}
