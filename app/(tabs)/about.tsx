@@ -1,5 +1,5 @@
 import { Link } from "expo-router";
-import { Text, View, StyleSheet, Pressable, Image, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, Pressable, Image, ImageBackground, StatusBar } from "react-native";
 
 
 
@@ -7,10 +7,12 @@ export default function Screen() {
 
     const image = { uri: "https://i.pinimg.com/736x/d5/d7/a5/d5d7a5f7fa0eaa70aa19fe826452a6f9.jpg" };
     return (
+        
         <ImageBackground source={image} style={styles.background} resizeMode="cover">
-            <View style={styles.overlay}/>
+            
             <View style={styles.overlay} />
             <View style={styles.container}>
+            <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
                 <View style={styles.textbase}>
                     <Text style={styles.h4}>Olá 👋, Sejam Bem-vindos ao Eu Quero Cosméticos,</Text>
                     <Text style={styles.h5}>A sua loja de cosméticos feita com carinho para o público feminino. Nossa jornada começou com o desejo de oferecer produtos de beleza de alta qualidade que atendem às necessidades e desejos de cada mulher, seja ela amante de maquiagem, cuidados com a pele, ou buscando realçar sua beleza natural.</Text>
@@ -51,9 +53,12 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
     },
     container: {
-        flex: 1,
-        justifyContent: "flex-start",
-        padding: 20
+        flex:1,
+        width:"100%",
+        height:"100%",
+        justifyContent: "center",
+        padding: 20,
+        
     },
     textbase: {
         alignItems: "baseline",

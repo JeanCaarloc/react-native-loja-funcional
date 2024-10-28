@@ -3,8 +3,18 @@ import { Image, ImageBackground, ScrollView, StyleSheet, Text, View } from "reac
 import { router, Stack, useLocalSearchParams } from "expo-router";
 import { Button } from "../../components/button";
 import { getProductsId } from "../../services/product";
+import React, { useState } from 'react';
+import QuantitySelector from '../../components/quantitySelector';
 
 export default function Screen() {
+    const [quantity, setQuantity] = useState(1);
+
+    const handleQuantityChange = (newQuantity: number) => {
+        setQuantity(newQuantity);
+        // Aqui você pode adicionar lógica para atualizar o total do carrinho ou valor do item
+    };
+
+
     //receber o id
     const { id } = useLocalSearchParams();
     const idProduct = parseInt(id as string)
@@ -32,6 +42,7 @@ export default function Screen() {
                     <Text style={styles.title}>{product.title}</Text>
                     <Text style={styles.description}>{product.description}</Text>
                     <View style={styles.priceArea}>
+                        <QuantitySelector onQuantityChange={handleQuantityChange} />
                         <Text style={styles.price}>R${product.price.toFixed(2)}</Text>
                     </View>
 
@@ -49,7 +60,8 @@ export default function Screen() {
 const styles = StyleSheet.create({
     background: {
         width: "100%",
-        height: "100%"
+        height: "100%",
+        paddingTop: 10
     },
     overlay: {
         ...StyleSheet.absoluteFillObject,
@@ -81,7 +93,7 @@ const styles = StyleSheet.create({
         textShadowRadius: 2,
     },
     description: {
-        fontSize: 15,
+        fontSize: 1,
         color: "white",
         textShadowColor: '#000000',
         textShadowOffset: { width: -1, height: 1 },
@@ -92,12 +104,21 @@ const styles = StyleSheet.create({
     priceArea: {
         padding: 10,
         borderRadius: 10,
-        backgroundColor: "#c2b09c"
+        flexDirection:"row",
+        alignContent:"center",
+        justifyContent:"space-between"
+    
     },
     price: {
         fontSize: 22,
+        fontWeight: 'bold',
         textAlign: "center",
-        color: "white",
+        color: "black",
+        backgroundColor: "#cfbb78",
+        paddingLeft:10,
+        borderRadius: 8,
+        borderWidth: 1,
+        paddingRight:10
 
     }
 })

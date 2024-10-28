@@ -35,7 +35,6 @@ export const ProductItem = ({ data }: Props) => {
                     <Text style={styles.description}>{data.description}</Text>
                     <View style={styles.qntPrice}>
                         <QuantitySelector onQuantityChange={handleQuantityChange} />
-                        <Text style={styles.quantity}>{quantity}</Text>
                         <Text style={styles.price}>R${data.price.toFixed(2)}</Text>
                     </View> 
                 </View>
@@ -76,9 +75,9 @@ const styles = StyleSheet.create({
         marginBottom: 10
     },
     qntPrice:{
-        borderWidth:1,
-        borderColor: "white",
-        flexDirection:"row"
+        flexDirection:"row",
+        alignContent:"center",
+        justifyContent:"space-between"
     },
     price: {
         fontSize: 14,
@@ -88,7 +87,7 @@ const styles = StyleSheet.create({
         backgroundColor: "#cfbb78",
         paddingLeft:10,
         borderRadius: 8,
-        borderWidth: 1
+        borderWidth: 1,
     },
     quantity: {
         marginTop: 10,

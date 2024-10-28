@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, FlatList, TextInput, ImageBackground,Linking, Image, ScrollView, TouchableOpacity, Pressable } from "react-native";
+import { Text, View, StyleSheet, FlatList, TextInput, ImageBackground,Linking, Image, ScrollView, TouchableOpacity, Pressable, StatusBar } from "react-native";
 import { getAllProducts } from "../../services/product";
 import { ProductItem2 } from "../../components/product-item2";
 import { FontAwesome } from '@expo/vector-icons';
@@ -34,7 +34,7 @@ export default function Screen() {
             <View style={styles.overlay} />
             <ScrollView contentContainerStyle={styles.scrollContent}>
                 <View style={styles.container}>
-                    
+                    <StatusBar/>
                     <View style={styles.img}>
                         <Image
                             source={require('../../assets/logo.jpg')}
@@ -173,6 +173,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
+        paddingTop:20
     },
     logo: {
         width: 200,
