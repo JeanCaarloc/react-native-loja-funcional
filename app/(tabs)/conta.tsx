@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, FlatList, ImageBackground, Pressable, Linking, TextInput } from "react-native";
+import { Text, View, StyleSheet, FlatList, ImageBackground, Pressable, Linking, TextInput, StatusBar } from "react-native";
 import { getAllProducts } from "../../services/product";
 import { ProductItem } from "../../components/product-item";
 import { useState } from "react";
@@ -28,23 +28,27 @@ export default function Screen() {
         <ImageBackground source={image} style={styles.background} resizeMode="cover">
             <View style={styles.overlay} />
             <View style={styles.container}>
+            <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
                 <View style={styles.form}>
-                    <Text style={styles.title}>Criar Usuarios</Text>
+                    <Text style={styles.title}>Criar Usuario</Text>
                     <TextInput
                         style={styles.input}
                         placeholder="nome"
+                        placeholderTextColor={"#ffffff"}
                         onChangeText={text => setNome(text)}
                         value={nome}
                     />
                     <TextInput
                         style={styles.input}
                         placeholder="sobrenome"
+                        placeholderTextColor={"#ffffff"}
                         onChangeText={text => setSobrenome(text)}
                         value={sobrenome}
                     />
                     <TextInput
                         style={styles.input}
                         placeholder="cpf"
+                        placeholderTextColor={"#ffffff"}
                         onChangeText={text => setCpf(text)}
                         value={cpf}
                     />
@@ -77,7 +81,6 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: '#fff',
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 100,
@@ -92,6 +95,10 @@ const styles = StyleSheet.create({
         fontSize: 32,
         fontWeight: 'bold',
         marginBottom: 20,
+        color: '#cfbb78',
+        textShadowColor: '#000000',
+        textShadowOffset: { width: -1, height: 1 },
+        textShadowRadius: 2,
       },
       input: {
         width: '65%',
@@ -99,8 +106,10 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         paddingHorizontal: 10,
         borderWidth: 1,
-        borderColor: '#ccc',
+        borderColor: '#cfbb78',
         borderRadius: 5,
+    
+       
       },
       buttons: {
         width: '65%',
@@ -108,7 +117,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
       },
       button: {
-        backgroundColor: '#007AFF',
+        backgroundColor: '#714246',
+        textShadowColor: '#000000',
+        textShadowOffset: { width: -1, height: 1 },
+        textShadowRadius: 2,
         justifyContent: "center",
         borderRadius: 5,
         alignItems: 'center',
@@ -116,7 +128,7 @@ const styles = StyleSheet.create({
         aspectRatio: 2.10
       },
       buttonText: {
-        color: '#fff',
+        color: '#cfbb78',
         fontSize: 16,
       }
     });

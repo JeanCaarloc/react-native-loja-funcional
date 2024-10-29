@@ -1,5 +1,5 @@
 import { SafeAreaView } from "react-native-safe-area-context";
-import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
+import { Image, ImageBackground, StatusBar, StyleSheet, Text, View } from "react-native";
 import { Button } from "../components/button";
 import { router } from "expo-router";
 
@@ -14,6 +14,7 @@ export default function Screen() {
         <ImageBackground source={image} style={styles.background} resizeMode="cover">
             <View style={styles.overlay} />
             <SafeAreaView style={styles.container}>
+            <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
                 <Image
                     source={require('../assets/logo.jpg')}
                     style={styles.logo}

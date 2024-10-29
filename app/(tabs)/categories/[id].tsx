@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, FlatList, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, FlatList, ImageBackground, StatusBar } from "react-native";
 import { getAllProducts, getProductsByCategory } from "../../../services/product";
 import { ProductItem } from "../../../components/product-item";
 import { router, Stack, useLocalSearchParams } from "expo-router";
@@ -20,6 +20,7 @@ export default function Screen() {
 
     return (
         <View style={styles.container}>
+            <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
             <Stack.Screen options={{ title: category.title }} />
             <ImageBackground source={image} style={styles.background} resizeMode="cover">
             <View style={styles.overlay} />

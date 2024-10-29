@@ -1,6 +1,6 @@
 import { Pressable, Text, StyleSheet, Image, View } from "react-native";
 import { Product } from "../types/product"
-import { Link } from "expo-router";
+import { Link, Stack } from "expo-router";
 import React, { useState } from 'react';
 import QuantitySelector from '../components/quantitySelector';
 
@@ -25,6 +25,20 @@ export const ProductItem = ({ data }: Props) => {
         // rota dinamica
         <Link href={`/product/${data.id}`} asChild>
             <Pressable style={styles.container}>
+            <Stack.Screen options={{
+                    
+                    headerTitleAlign: 'center',
+                    navigationBarColor: '#714246',
+                    headerStyle: {
+                        backgroundColor: '#714246',
+                    },
+                    headerTitleStyle: {
+                        fontWeight: 'bold',
+                    },
+                    headerTintColor: "#cfbb78"
+                }} 
+                />
+                
                 <Image
                     style={styles.img}
                     source={{ uri: data.image }}
@@ -34,7 +48,7 @@ export const ProductItem = ({ data }: Props) => {
                     <Text style={styles.title}>{data.title}</Text>
                     <Text style={styles.description}>{data.description}</Text>
                     <View style={styles.qntPrice}>
-                        <QuantitySelector onQuantityChange={handleQuantityChange} />
+                        
                         <Text style={styles.price}>R${data.price.toFixed(2)}</Text>
                     </View> 
                 </View>

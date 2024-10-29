@@ -11,6 +11,7 @@ export const ProductItem2 = ({ data }: Props) => {
         // rota dinamica
         <Link href={`/product/${data.id}`} asChild>
             <Pressable style={styles.container}>
+                
                 <Image
                     style={styles.img}
                     source={{ uri: data.image }}

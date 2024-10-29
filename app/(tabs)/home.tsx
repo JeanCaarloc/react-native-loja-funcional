@@ -34,7 +34,8 @@ export default function Screen() {
             <View style={styles.overlay} />
             <ScrollView contentContainerStyle={styles.scrollContent}>
                 <View style={styles.container}>
-                    <StatusBar/>
+                <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+                    
                     <View style={styles.img}>
                         <Image
                             source={require('../../assets/logo.jpg')}
@@ -92,7 +93,7 @@ export default function Screen() {
                         />
                     </View>
                     <View style={styles.info}>
-                        <Text style={styles.h4}>Tutoriais</Text>
+                        <Text style={styles.h4}>Serviços de Estética</Text>
                     </View>
                     <View style={styles.artigos}>
                         <View style={styles.areaSlides}>

@@ -28,6 +28,7 @@ const QuantitySelector: React.FC<QuantitySelectorProps> = ({
 
   return (
     <View style={styles.container}>
+      
       <TouchableOpacity style={styles.button} onPress={decreaseQuantity}>
         <Text style={styles.buttonText}>−</Text>
       </TouchableOpacity>

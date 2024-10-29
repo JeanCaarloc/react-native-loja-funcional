@@ -13,6 +13,7 @@ export const CategoryItem = ({data}: Props) =>{
     }
     return(
         <Pressable style={styles.container} onPress={click}>
+            
             <Image 
                 style={styles.image}
                 source={{uri: data.cover}}

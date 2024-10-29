@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, FlatList, ImageBackground, Pressable, Linking } from "react-native";
+import { Text, View, StyleSheet, FlatList, ImageBackground, Pressable, Linking, StatusBar } from "react-native";
 import { getAllProducts } from "../../services/product";
 import { ProductItem } from "../../components/product-item";
 
@@ -21,6 +21,7 @@ export default function Screen() {
         <ImageBackground source={image} style={styles.background} resizeMode="cover">
             <View style={styles.overlay} />
             <View style={styles.container}>
+            <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
                 <View style={styles.button}>
                     <Text style={styles.h1}>Conta</Text>
                 </View>

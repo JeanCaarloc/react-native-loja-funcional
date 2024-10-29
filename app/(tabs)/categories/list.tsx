@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, FlatList, ImageBackground } from "react-native";
+import { Text, View, StyleSheet, FlatList, ImageBackground, StatusBar } from "react-native";
 
 import { getAllCategories } from "../../../services/category";
 import { CategoryItem } from "../../../components/category-item";
@@ -15,6 +15,7 @@ export default function Screen() {
         <ImageBackground source={image} style={styles.background} resizeMode="cover">
             <View style={styles.overlay} />
             <View style={styles.container}>
+            <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
             <Stack.Screen options={{
                 title: 'Categorias',
                 headerTitleAlign: 'center',
