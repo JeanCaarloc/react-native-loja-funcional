@@ -15,7 +15,7 @@ export default function Screen() {
             <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
                 <View style={styles.textbase}>
                     <Text style={styles.h4}>Olá 👋, Sejam Bem-vindos ao Eu Quero Cosméticos,</Text>
-                    <Text style={styles.h5}>A sua loja de cosméticos feita com carinho para o público feminino. Nossa jornada começou com o desejo de oferecer produtos de beleza de alta qualidade que atendem às necessidades e desejos de cada mulher, seja ela amante de maquiagem, cuidados com a pele, ou buscando realçar sua beleza natural.</Text>
+                    <Text style={styles.h6}>A sua loja de cosméticos feita com carinho para o público feminino. Nossa jornada começou com o desejo de oferecer produtos de beleza de alta qualidade que atendem às necessidades e desejos de cada mulher, seja ela amante de maquiagem, cuidados com a pele, ou buscando realçar sua beleza natural.</Text>
                     <Text style={styles.h6}>Nosso objetivo é proporcionar uma experiência de compra única, oferecendo uma curadoria de produtos que não só embelezam, mas também cuidam de você. Acreditamos que cada cliente merece o melhor, por isso buscamos constantemente as melhores marcas e lançamentos do mercado, sempre pensando no que pode agregar ao seu bem-estar e autoestima.</Text>
                     <Text style={styles.h6}>Qualidade é o nosso compromisso. Trabalhamos com cosméticos que passam por rigorosos testes de qualidade, garantindo que cada produto ofereça o máximo de eficácia e segurança. No Eu Quero Cosméticos, queremos que você se sinta confiante em cada escolha, sabendo que está investindo em produtos que realmente fazem a diferença.</Text>
                     <Text style={styles.h6}>Seja bem-vinda à nossa loja, onde a sua beleza é celebrada e cuidada em cada detalhe!</Text>
@@ -100,11 +100,6 @@ const styles = StyleSheet.create({
     },
     h4: {
         fontSize: 18,
-        marginBottom: 8,
-        color: "#ffffff"
-    },
-    h5: {
-        fontSize: 15,
         marginBottom: 8,
         color: "#ffffff"
     },

@@ -91,7 +91,8 @@ const styles = StyleSheet.create({
     qntPrice:{
         flexDirection:"row",
         alignContent:"center",
-        justifyContent:"space-between"
+        justifyContent:"space-between",
+        
     },
     price: {
         fontSize: 14,
@@ -99,9 +100,11 @@ const styles = StyleSheet.create({
         textAlign: "center",
         color: "black",
         backgroundColor: "#cfbb78",
-        paddingLeft:10,
         borderRadius: 8,
         borderWidth: 1,
+        padding:2,
+        paddingLeft:5,
+        paddingRight:5,
     },
     quantity: {
         marginTop: 10,

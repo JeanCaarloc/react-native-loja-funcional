@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, FlatList, ImageBackground, StatusBar } from "react-native";
+import { View, StyleSheet, FlatList, ImageBackground, StatusBar } from "react-native";
 
 import { getAllCategories } from "../../../services/category";
 import { CategoryItem } from "../../../components/category-item";

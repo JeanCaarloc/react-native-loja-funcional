@@ -1,6 +1,4 @@
-import { Text, View, StyleSheet, FlatList, ImageBackground, Pressable, Linking, TextInput, StatusBar } from "react-native";
-import { getAllProducts } from "../../services/product";
-import { ProductItem } from "../../components/product-item";
+import { Text, View, StyleSheet, ImageBackground, Pressable, TextInput, StatusBar } from "react-native";
 import { useState } from "react";
 import { useRouter } from "expo-router";
 import firebase from "../../firebase"
@@ -108,6 +106,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#cfbb78',
         borderRadius: 5,
+        color:'#ffffff'
     
        
       },

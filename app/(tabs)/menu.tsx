@@ -1,10 +1,7 @@
-import { Text, View, StyleSheet, FlatList, ImageBackground, Pressable, Linking, StatusBar } from "react-native";
+import { Text, View, StyleSheet, ImageBackground, Pressable, Linking, StatusBar } from "react-native";
 import { getAllProducts } from "../../services/product";
-import { ProductItem } from "../../components/product-item";
 
 export default function Screen() {
-    //puxando todos os produtos
-    const products = getAllProducts();
 
     const carrinho = () => {
         // alert("Você esta comprando: "props.product.name)
@@ -46,7 +43,7 @@ const styles = StyleSheet.create({
     },
     overlay: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
     },
     container: {
         flex: 1,

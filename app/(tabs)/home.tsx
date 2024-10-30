@@ -2,8 +2,6 @@ import { Text, View, StyleSheet, FlatList, TextInput, ImageBackground,Linking, I
 import { getAllProducts } from "../../services/product";
 import { ProductItem2 } from "../../components/product-item2";
 import { FontAwesome } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { Tabs } from 'expo-router';
 import React, { useState } from "react";
 
 export default function Screen() {
