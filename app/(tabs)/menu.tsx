@@ -29,7 +29,7 @@ export default function Screen() {
                     <Text style={styles.h1}>Carrinho</Text>
                 </Pressable>
                 <View style={styles.button}>
-                    <Text style={styles.h1}>Duvidas</Text>
+                    <Text style={styles.h1}>Cadastrar Produto</Text>
                 </View>
             </View>
         </ImageBackground>

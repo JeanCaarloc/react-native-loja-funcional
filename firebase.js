@@ -16,4 +16,5 @@ if (!firebase.apps.length) {
     console.log(`Conectando: ${firebase.apps.length}`)
 }
 
-export default firebase;
+const db = firebase.firestore();
+export { db };
