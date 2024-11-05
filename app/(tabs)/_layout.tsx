@@ -5,7 +5,7 @@ export default function TabLayout() {
     return (
         <Tabs
             screenOptions={{
-                tabBarActiveTintColor: '#cfbb78', 
+                tabBarActiveTintColor: '#cfbb78',
                 tabBarInactiveTintColor: 'white',
                 tabBarStyle: { backgroundColor: '#714246' }
             }}
@@ -42,6 +42,16 @@ export default function TabLayout() {
                     tabBarIcon: ({ color }) => <FontAwesome size={28} name="user" color={color} />
                 }}
             />
+
+            <Tabs.Screen
+                name="cadastrar"
+                options={{
+                    title: 'Cadastrar',
+                    headerShown: false,
+                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="plus" color={color} />
+                }}
+            />
+
         </Tabs>
     );
 }

@@ -61,7 +61,7 @@ export const ProductItem = ({ data }: Props) => {
 const styles = StyleSheet.create({
     container: {
         flexDirection: "row",
-        marginBottom: 20
+        marginBottom: 20,
     },
     img: {
         width: 100,
@@ -72,7 +72,6 @@ const styles = StyleSheet.create({
     },
     info: {
         flex: 1,
-
     },
     title: {
         fontSize: 16,
