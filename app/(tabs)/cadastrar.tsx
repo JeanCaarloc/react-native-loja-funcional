@@ -141,9 +141,9 @@ const styles = StyleSheet.create({
     paddingTop:60
   },
   inputContainer: {
-    width: "80%",
-    height: 400,
-    marginBottom: 30,
+    width: "90%",
+    height: 450,
+    marginBottom: 20,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 10,
@@ -155,7 +155,7 @@ const styles = StyleSheet.create({
     height: "40%",
   },
   input: {
-    width: "70%",
+    width: "80%",
     height: 25,
     backgroundColor: '#fff',
     borderWidth: 1,
