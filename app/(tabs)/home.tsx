@@ -1,29 +1,30 @@
-import { Text, View, StyleSheet, FlatList, TextInput, ImageBackground,Linking, Image, ScrollView, TouchableOpacity, Pressable, StatusBar } from "react-native";
+import { Text, View, StyleSheet, FlatList, TextInput, ImageBackground, Linking, Image, ScrollView, TouchableOpacity, Pressable, StatusBar } from "react-native";
 import { getAllProducts } from "../../services/product";
 import { ProductItem2 } from "../../components/product-item2";
 import { FontAwesome } from '@expo/vector-icons';
 import React, { useState } from "react";
+import ProductList3 from '../../components/product-item3';
 
 export default function Screen() {
     const [searchQuery, setSearchQuery] = useState(""); // Estado para armazenar o texto de busca
     const [isFocused, setIsFocused] = useState(false); // Para controlar quando mostrar a lista de resultados
-    
+
     const products = getAllProducts();
 
-    const filteredProducts = products.filter(product => 
+    const filteredProducts = products.filter(product =>
         product.title.toLowerCase().includes(searchQuery.toLowerCase()) // Filtra os produtos
     );
-    
+
     const image = { uri: "https://i.pinimg.com/736x/d5/d7/a5/d5d7a5f7fa0eaa70aa19fe826452a6f9.jpg" };
-   
-   
-    const carrinho = () =>{
+
+
+    const carrinho = () => {
         // alert("Você esta comprando: "props.product.name)
         const url = 'https://salaocare.com.br/';
-    //importar o linking e fazer ele abrir o link
-    Linking.openURL(url).catch(err =>{
-        console.error("Failed to open URL:", err);
-        alert("Não foi possivel abrir o link");
+        //importar o linking e fazer ele abrir o link
+        Linking.openURL(url).catch(err => {
+            console.error("Failed to open URL:", err);
+            alert("Não foi possivel abrir o link");
         });
     }
 
@@ -32,8 +33,8 @@ export default function Screen() {
             <View style={styles.overlay} />
             <ScrollView contentContainerStyle={styles.scrollContent}>
                 <View style={styles.container}>
-                <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
-                    
+                    <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+
                     <View style={styles.img}>
                         <Image
                             source={require('../../assets/logo.jpg')}
@@ -56,7 +57,7 @@ export default function Screen() {
                                 onChangeText={text => setSearchQuery(text)} // Atualiza o estado de busca
                                 onFocus={() => setIsFocused(true)} // Mostra a lista de resultados
                                 onBlur={() => setIsFocused(false)} // Esconde a lista de resultados quando o campo perde o foco
-                            
+
                             />
                         </View>
                         {/* Exibir a lista de resultados filtrados */}
@@ -76,6 +77,9 @@ export default function Screen() {
                     </View>
                     <View style={styles.info}>
                         <Text style={styles.h4}>Produtos</Text>
+                    </View>
+                    <View style={styles.productFire}>
+                        <ProductList3 />
                     </View>
                     {/* Deixe a FlatList fora do ScrollView */}
                     <View style={styles.itens}>
@@ -127,7 +131,7 @@ export default function Screen() {
                             <Pressable style={styles.slides} onPress={carrinho}>
                                 <Image
                                     source={{ uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZWDLL4UZ0AGWzd9PbsRn5wXEKK2m5mhxYKQ&s" }}
-                                    
+
                                     style={styles.skillImage}
                                 />
                             </Pressable>
@@ -172,7 +176,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        paddingTop:20
+        paddingTop: 20
     },
     logo: {
         width: 200,
@@ -226,17 +230,17 @@ const styles = StyleSheet.create({
     icon: {
         marginRight: 10,
     },
-    info:{
-        width:"100%",
-        height:20,
+    info: {
+        width: "100%",
+        height: 20,
 
         justifyContent: "center",
         alignItems: "center",
         marginBottom: 10,
     },
-    h4:{
+    h4: {
         color: "#cfbb78",
-        fontWeight:"bold",
+        fontWeight: "bold",
         fontSize: 16,
         textShadowColor: '#000000',
         textShadowOffset: { width: -1, height: 1 },
@@ -249,7 +253,7 @@ const styles = StyleSheet.create({
 
     itens: {
         width: "100%",
-        height:90,
+        height: 90,
         flexDirection: "row"
     },
     artigos: {
@@ -296,5 +300,7 @@ const styles = StyleSheet.create({
     resultText: {
         color: "#000",
     },
-
+    productFire:{
+        flexDirection:'row',
+    },
 });
