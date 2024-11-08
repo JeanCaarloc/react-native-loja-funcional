@@ -82,18 +82,7 @@ export default function Screen() {
                         <ProductList3 />
                     </View>
                     {/* Deixe a FlatList fora do ScrollView */}
-                    <View style={styles.itens}>
-                        <FlatList
-                            data={products}
-                            renderItem={({ item }) => <ProductItem2 data={item} />}
-                            keyExtractor={item => item.id.toString()}
-                            style={styles.list}
-                            horizontal={true}
-                            showsHorizontalScrollIndicator={false}
-                            pagingEnabled={true}
-                            decelerationRate="fast"
-                        />
-                    </View>
+                    
                     <View style={styles.info}>
                         <Text style={styles.h4}>Serviços de Estética</Text>
                     </View>
