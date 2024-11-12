@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TextInput, Button, Image, FlatList, Pressable, ImageBackground } from 'react-native';
-import { db } from '../../firebase';
+import { db } from '../firebase';
 
 interface Produto {
   id: string;
@@ -73,7 +73,7 @@ export default function CadastrarProduto() {
         <View style={styles.inputContainer}>
 
           <Image
-            source={require('../../assets/cadastroProduto.png')}
+            source={require('../assets/logo.jpg')}
             style={styles.cadastroProduto}
           />
 

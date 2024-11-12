@@ -43,14 +43,6 @@ export default function TabLayout() {
                 }}
             />
 
-            <Tabs.Screen
-                name="cadastrar"
-                options={{
-                    title: 'Cadastrar',
-                    headerShown: false,
-                    tabBarIcon: ({ color }) => <FontAwesome size={28} name="plus" color={color} />
-                }}
-            />
 
         </Tabs>
     );

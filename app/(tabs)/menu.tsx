@@ -1,5 +1,5 @@
-import { Text, View, StyleSheet, ImageBackground, Pressable, Linking, StatusBar } from "react-native";
-import { getAllProducts } from "../../services/product";
+import { Link, router } from "expo-router";
+import { Text, View, StyleSheet, ImageBackground, Pressable, Linking, StatusBar, TouchableOpacity } from "react-native";
 
 export default function Screen() {
 
@@ -13,24 +13,34 @@ export default function Screen() {
         });
     }
 
+    const buttonCadastrar = () => {
+        router.push("/cadastrar");
+    }
+
+    const buttonConta = () => {
+        router.push("/conta");
+    }
+
+
     const image = { uri: "https://i.pinimg.com/736x/d5/d7/a5/d5d7a5f7fa0eaa70aa19fe826452a6f9.jpg" };
     return (
         <ImageBackground source={image} style={styles.background} resizeMode="cover">
             <View style={styles.overlay} />
             <View style={styles.container}>
-            <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
-                <View style={styles.button}>
+                <StatusBar translucent backgroundColor="transparent" barStyle="light-content" />
+                <TouchableOpacity onPress={buttonConta} style={styles.button}>
                     <Text style={styles.h1}>Conta</Text>
-                </View>
+                </TouchableOpacity>
                 <View style={styles.button}>
                     <Text style={styles.h1}>Configurações</Text>
                 </View>
-                <Pressable style={styles.button} onPress={carrinho}>
+                <Pressable style={styles.button} >
                     <Text style={styles.h1}>Carrinho</Text>
                 </Pressable>
-                <View style={styles.button}>
+                <TouchableOpacity onPress={buttonCadastrar} style={styles.button}>
                     <Text style={styles.h1}>Cadastrar Produto</Text>
-                </View>
+                </TouchableOpacity>
+
             </View>
         </ImageBackground>
 

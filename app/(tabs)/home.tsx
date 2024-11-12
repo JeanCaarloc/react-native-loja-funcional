@@ -1,6 +1,4 @@
-import { Text, View, StyleSheet, FlatList, TextInput, ImageBackground, Linking, Image, ScrollView, TouchableOpacity, Pressable, StatusBar } from "react-native";
-import { getAllProducts } from "../../services/product";
-import { ProductItem2 } from "../../components/product-item2";
+import { Text, View, StyleSheet, TextInput, ImageBackground, Linking, Image, ScrollView,  Pressable, StatusBar } from "react-native";
 import { FontAwesome } from '@expo/vector-icons';
 import React, { useState } from "react";
 import ProductList3 from '../../components/product-item3';
@@ -9,11 +7,8 @@ export default function Screen() {
     const [searchQuery, setSearchQuery] = useState(""); // Estado para armazenar o texto de busca
     const [isFocused, setIsFocused] = useState(false); // Para controlar quando mostrar a lista de resultados
 
-    const products = getAllProducts();
+    
 
-    const filteredProducts = products.filter(product =>
-        product.title.toLowerCase().includes(searchQuery.toLowerCase()) // Filtra os produtos
-    );
 
     const image = { uri: "https://i.pinimg.com/736x/d5/d7/a5/d5d7a5f7fa0eaa70aa19fe826452a6f9.jpg" };
 
@@ -60,20 +55,7 @@ export default function Screen() {
 
                             />
                         </View>
-                        {/* Exibir a lista de resultados filtrados */}
-                        {isFocused && filteredProducts.length > 0 && (
-                            <View style={styles.searchResults}>
-                                <FlatList
-                                    data={filteredProducts}
-                                    renderItem={({ item }) => (
-                                        <Pressable style={styles.resultItem}>
-                                            <Text style={styles.resultText}>{item.title}</Text>
-                                        </Pressable>
-                                    )}
-                                    keyExtractor={item => item.id.toString()}
-                                />
-                            </View>
-                        )}
+                        
                     </View>
                     <View style={styles.info}>
                         <Text style={styles.h4}>Produtos</Text>

@@ -1,7 +1,7 @@
 import { Text, View, StyleSheet, ImageBackground, Pressable, TextInput, StatusBar } from "react-native";
 import { useState } from "react";
 import { useRouter } from "expo-router";
-import firebase from "../../firebase"
+import { firebase } from "../firebase"
 
 export default function Screen() {
 
