@@ -68,7 +68,7 @@ eas build -p android --profile production
 * **Expo:** Plataforma para desenvolvimento rápido e eficiente de aplicativos React Native.
 * **Firebase:** Banco de dados em tempo real que permite armazenar, sincronizar e recuperar dados para aplicativos de forma rápida e escalável. 
 
-  ## Screen
+  ## Screens
 
 <img src="/assets/telasApp/HOME.png" width="300" height="600">  <img src="/assets/telasApp/CATEGORIAS.png" width="300" height="600">   <img src="/assets/telasApp/MENU.png" width="300" height="600">
 <img src="/assets/telasApp/SOBRE.png" width="300" height="600">  <img src="/assets/telasApp/LISTADEPRODUTOS.png" width="300" height="600">   <img src="/assets/telasApp/PRODUTO.png" width="300" height="600">
