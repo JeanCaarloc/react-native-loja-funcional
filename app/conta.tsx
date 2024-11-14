@@ -57,9 +57,7 @@ export default function Screen() {
                         >
                         <Text style={styles.buttonText}>Criar</Text>
                     </Pressable>
-                    <Pressable style={styles.button} onPress={() => router.push("/lista")}>
-                        <Text style={styles.buttonText}>Ver listas</Text>
-                    </Pressable>
+                    
 
 
                 </View>
