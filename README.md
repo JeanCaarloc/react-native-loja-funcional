@@ -1,4 +1,4 @@
-# Título do projeto
+# Eu Que Cosmeticos
 
 Aplicativo Loja Funcional - React Native com Expo Router
 
