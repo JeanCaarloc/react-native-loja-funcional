@@ -1,4 +1,4 @@
-# Eu Que Cosmeticos
+# Eu Quero Cosmeticos
 
 Aplicativo Loja Funcional - React Native com Expo Router
 
